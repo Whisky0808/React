@@ -1,0 +1,16 @@
+## HW1 Concept
+- What is dependency and dev dependency? What’s the difference?
+answer: dependency is something that we need when we run the project online
+        dev dependency is the dependency we used when we build up the project
+- What is package.json and package-lock.json? What’s the difference?
+answer: package.json is something that have the list of project info, dependencies and script
+        package-lock.json is the records of exact versions of all the installed packages for consistency
+- What is JSX? Why do we need babel?
+answer:the jsx is used in react, let you write the html look script in react
+babel is convert the morden js or jsx to code that browser can understand
+- SPA vs MPA
+answer: SPA single page application: the page load dynamically, no fully refresh
+MPA :multiple pages application: multiple pages, and reload on each navigation
+- CSR vs SSR
+answer:CSR Client side rendering --- broswer render the html content with js  【browser download the js, and render it on the website】
+SSR is Server side render --- server pre-render html before sending it to the broswer [server render the html content first then send it to the browswe]
