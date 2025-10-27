@@ -1,0 +1,10 @@
+
+Answer the following questions in your own words:
+What’s the purpose of using the key attribute when we render a list of items in JSX?
+- to give each element a unique , stable identity
+What is the “children” props?
+- a special props that automatically receive the parents' opening & closing tags
+What is pure function and pure component?
+- pure function is given the same input, it always has the same output, no side effect, while pure component is a specific performance optimization in react that based on the principle of pure function 
+What is conditional rendering? How do you implement it effectively?
+- In React, conditional rendering is the process of displaying different content or components based on certain conditions. It allows you to create dynamic and responsive user interfaces that adapt to changes in your application's state or props.
