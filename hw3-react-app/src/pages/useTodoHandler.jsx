@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 
 export default function useTodoHandler(pendingInit, completedInit) {
+  
   const initialPending = Array.isArray(pendingInit) ? pendingInit : [];
   const initialCompleted = Array.isArray(completedInit) ? completedInit : [];
 
@@ -97,7 +98,7 @@ export default function useTodoHandler(pendingInit, completedInit) {
     console.log("[switch] moved to pending:", id);
   };
 
-    return {
+  return {
     pendingForCard,
     completedForCard,
     draftTitle,
@@ -107,5 +108,5 @@ export default function useTodoHandler(pendingInit, completedInit) {
     handleDelete,
     handleComplete,
     handleSwitch,
-  };    
+  };
 }

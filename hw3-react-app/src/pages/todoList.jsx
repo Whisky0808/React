@@ -1,12 +1,28 @@
-import {
-  pendingTasks as pendingInit,
-  completedTasks as completedInit,
-} from "../components/todolist-components/todoList-data.js";
+// import {
+//   pendingTasks as pendingInit,
+//   completedTasks as completedInit,
+// } from "../components/todolist-components/todoList-data.js";
 import Card from "../components/todolist-components/card.jsx";
 import Button from "../components/tools/button.jsx";
 import Add from "../components/tools/add.jsx";
 import "../css/todoList.css";
 import useTodoHandler from "./useTodoHandler.jsx";
+
+const fetchDummyTodoList = async () => {
+    try {
+      const res = await fetch("https://dummyjson.com/todos");
+      const data = await res.json();
+      const pendingInit = data?.todos.filter((todo) => !todo.completed);
+      const completedInit = data?.todos.filter((todo) => todo.completed);
+      console.log("Fetched dummy todos:", data);
+      return { pendingInit, completedInit };
+    } catch (error) {
+      console.error("Error fetching dummy todos:", error);
+      return null;
+    }
+  };
+
+  const { pendingInit, completedInit } = await fetchDummyTodoList();
 
 export default function TodoList() {
   const {
@@ -20,6 +36,9 @@ export default function TodoList() {
     handleComplete,
     handleSwitch,
   } = useTodoHandler(pendingInit, completedInit);
+
+
+
 
   return (
     <div className="todo-page">
