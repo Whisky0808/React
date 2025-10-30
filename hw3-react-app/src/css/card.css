@@ -1,11 +1,16 @@
 .card {
-  width: 90%;
-  max-width: 600px;
+   display: flex;
+  flex-direction: column;
+  height: 60%;
+  max-height: fit-content;
+  width: 100%;
+  max-width: 700px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   margin-top: 16px;
   padding: 16px;
+
 }
 
 .card h3 {
@@ -16,11 +21,14 @@
 
 .task-item {
   display: flex;
+  max-width: 500px;
   justify-content: space-between;
   align-items: center;
   border: 1px solid #e5e7eb;
   border-radius: 6px;
   padding: 8px 12px;
+  height: 100%;
+  max-height: fit-content;
 }
 
 .task-title {
@@ -31,13 +39,14 @@
 
 .task-buttons {
   display: flex;
+  flex-direction: row;
   gap: 6px;
 }
 
 .task-buttons button {
   padding: 4px 10px;
   border: 1px solid #d1d5db;
-  background-color: #f3f4f6;
+  background-color: #1354d6;
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;

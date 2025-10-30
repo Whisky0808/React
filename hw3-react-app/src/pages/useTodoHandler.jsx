@@ -15,29 +15,29 @@ export default function useTodoHandler(pendingInit, completedInit) {
           .filter((t) => t && typeof t.id !== "undefined")
           .map((t) => ({
             id: String(t.id),
-            name: typeof t.title === "string" ? t.title : "",
+            name: String(t.todo),
           }))
       : [];
 
   const pendingForCard = useMemo(() => adaptForCard(pending), [pending]);
   const completedForCard = useMemo(() => adaptForCard(completed), [completed]);
 
-  useEffect(() => {
-    console.log("[mount] pendingInit:", pendingInit);
-    console.log("[mount] completedInit:", completedInit);
-    console.log("[mount] initial state pending:", initialPending);
-    console.log("[mount] initial state completed:", initialCompleted);
-  }, []);
+  // useEffect(() => {
+  //   console.log("[mount] pendingInit:", pendingInit);
+  //   console.log("[mount] completedInit:", completedInit);
+  //   console.log("[mount] initial state pending:", initialPending);
+  //   console.log("[mount] initial state completed:", initialCompleted);
+  // }, []);
 
-  useEffect(() => {
-    console.log("[state] pending:", pending);
-    console.log("[state] completed:", completed);
-  }, [pending, completed]);
+  // useEffect(() => {
+  //   console.log("[state] pending:", pending);
+  //   console.log("[state] completed:", completed);
+  // }, [pending, completed]);
 
-  useEffect(() => {
-    console.log("[computed] pendingForCard:", pendingForCard);
-    console.log("[computed] completedForCard:", completedForCard);
-  }, [pendingForCard, completedForCard]);
+  // useEffect(() => {
+  //   console.log("[computed] pendingForCard:", pendingForCard);
+  //   console.log("[computed] completedForCard:", completedForCard);
+  // }, [pendingForCard, completedForCard]);
 
   const handleAddTask = () => {
     const title = (draftTitle || "").trim();

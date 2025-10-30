@@ -50,7 +50,7 @@ export default function TodoList() {
       <Button label="Add Task" onClick={handleAddTask} />
 
       <Card
-      className="card-item"
+        className="card-item"
         title="Pending"
         itemList={pendingForCard}
         buttonList={["Complete", "Edit", "Delete"]}
