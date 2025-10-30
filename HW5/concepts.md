@@ -8,4 +8,5 @@ Compare useState vs useReducer. When is useReducer a better choice?
     when you need to do multiple operations on the States or when you need to handle a batch of state's status
 How to trigger a re-render in React?
     uss the lifecircle hook function, like useEffect
+    the useState hook, when you change the state, it will trigger and re-render the page
     
