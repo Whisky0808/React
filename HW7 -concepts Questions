@@ -1,0 +1,13 @@
+Answer these questions:
+## How to prevent functional/class components from unnecessary re-rendering?
+- in the functonal 
+    - components: we can use React.memo to wrap up the component, only re-render when the props has changes
+    - useCallback: remember the function definition, avoiding the new function as props to sent to the child component
+    - useMemo : manage and remember the expensive result or object, ensure the stability
+
+- Class Component
+    - Pure Component will compare the props and statement shallowly. similar to React.memo
+    - shouldComponentUpdate
+## Why use useMemo and useCallback with React.memo?
+    - to rerender the 
+    Why is immutability important in React?
