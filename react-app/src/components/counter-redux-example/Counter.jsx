@@ -11,7 +11,7 @@ export default function Counter(){
     return(
         <div>
             <h2>Counter:{counter}</h2>
-            {/* dispatch action , 没有payload也要写（），是个函数*/}
+            {/* dispatch action , 告诉它，我要派发的是这个，上面引用了的，没有payload也要写（），是个函数*/}
             <button onClick={()=>dispatch(increment())}>increment</button>
             <button onClick={()=>dispatch(decrement())}>decrement</button>
             <button onClick={()=>dispatch(incrementByAmount(5))}>incrementByAmount 5</button>
