@@ -5,6 +5,7 @@ export default function Counter(){
     // 当你的 React 组件渲染时，useSelector 会查看 Redux store 中的当前全局状态树（Global State Tree）。
     // useSelector 内部会调用你提供的这个箭头函数。
     // 在调用时，useSelector 会把完整的全局 Redux 状态作为第一个（也是唯一的）参数传递给你定义的 state 变量。
+    // useSelector 的作用是从 Redux store 中提取数据。它需要访问的是 Redux store 的状态（state）
     const counter = useSelector((state) =>state.counter.value)
     const dispatch = useDispatch();
 
