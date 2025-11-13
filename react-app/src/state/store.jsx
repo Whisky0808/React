@@ -11,7 +11,5 @@ export const store = configureStore({
         counter:counterSlice,
         todoList:todoListSlice,
 
-
-
     },
 });

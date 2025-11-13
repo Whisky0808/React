@@ -15,7 +15,7 @@ function App() {
       {/* <DoubleSelector></DoubleSelector> */}
       {/* <Timer></Timer> */}
       {/* <Counter/> */}
-      <TodoList/>
+      {/* <TodoList/> */}
 
 
     </div>

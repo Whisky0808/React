@@ -5,11 +5,34 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux"
 import {store} from './state/store.jsx'
+import {createBrowserRouter, RouterProvider} from "react-router-dom"
+import RouterRoot from './myRouter/RouterRoot.jsx';
+import Profile from './myRouter/Profile.jsx';
+import ProfilePage from './myRouter/ProfilePage.jsx';
+
+const router = createBrowserRouter([
+  {
+    path:'/',
+    element:<RouterRoot></RouterRoot>
+  },
+  {
+    path:'/profile',
+    element:<Profile/>
+
+  },
+  {
+    // :id --> dynamic segment
+    path:'/profile/:profileId',
+    element:<ProfilePage/>
+
+  }
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // mounting/ updating App component for twice
   <Provider store={store}>
+    <RouterProvider router={router}/>
     <App />
   </Provider>
     
