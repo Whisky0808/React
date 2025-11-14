@@ -4,7 +4,9 @@ What is state lifting and props drilling?
 
 How to avoid props drilling?
     use the UseContext, to share the props to the block level or global level and components can get the props when it is necessary.
-Compare useState vs useReducer. When is useReducer a better choice?
+Compare useState vs useReducer. 
+
+When is useReducer a better choice?
     when you need to do multiple operations on the States or when you need to handle a batch of state's status
 How to trigger a re-render in React?
     uss the lifecircle hook function, like useEffect
