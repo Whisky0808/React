@@ -46,35 +46,33 @@ export default function ItemsList() {
         <button onClick={handleMoney}>ADD MONEY</button>
       </div>
       <h2>Items List</h2>
-      <h2>Wallet:</h2>
-      {wallet}
+      <h2>{`wallet $ :${wallet}`}</h2>
       <ul>
         <li
           style={{
-            justifyContent: "space center",
-            alignItems: "cenrter",
+
             display: "flex",
-            gap: "10px",
+            gap: "20px",
           }}
         >
-          <span>NAME</span>
-          <span>PRICE</span>
-          <span>STOCK</span>
+          <span style={{ width: "100px" }}>NAME</span>
+          <span  style={{ width: "50px" }}>PRICE</span>
+          <span  style={{ width: "50px" }}>STOCK</span>
+          <span  style={{ width: "50px" }}>ACTION</span>
         </li>
         {itemsList.map((item) => {
           return (
             <li
               key={item.id}
               style={{
-                justifyContent: "space center",
-                alignItems: "cenrter",
                 display: "flex",
-                gap: "10px",
+                gap: "20px",
               }}
             >
-              <span>{item.name}</span>
-              <span>{item.price}</span>
-              <span>{item.stock}</span>
+              <span style={{ width: "100px" }}>{item.name}</span>
+              <span style={{ width: "50px" }}>{item.price}</span>
+              <span style={{ width: "50px" }}>{item.stock}</span>
+             
               <button
                 onClick={() => {
                   updateStock(item);
