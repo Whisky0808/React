@@ -9,6 +9,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import RouterRoot from './myRouter/RouterRoot.jsx';
 import Profile from './myRouter/Profile.jsx';
 import ProfilePage from './myRouter/ProfilePage.jsx';
+import ItemsList from './SmartVendingMachine/ItemsList.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
   {
     path:'/profile',
     element:<Profile/>
+
+  },
+  {
+    path:'/itemsList',
+    element:<ItemsList/>
 
   },
   {
