@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ApolloProvider } from "@apollo/client";
+import {client} from "../src/components/ApolloClient&GraphQl/apollo/client.js"
 import {Provider} from "react-redux"
 import {store} from './state/store.jsx'
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
@@ -10,6 +12,7 @@ import RouterRoot from './myRouter/RouterRoot.jsx';
 import Profile from './myRouter/Profile.jsx';
 import ProfilePage from './myRouter/ProfilePage.jsx';
 import ItemsList from './SmartVendingMachine/ItemsList.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -37,15 +40,16 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // mounting/ updating App component for twice
-  <Provider store={store}>
-    <RouterProvider router={router}/>
+  // <Provider store={store}>
+  //   <RouterProvider router={router}/>
+  //   <App />
+  // </Provider>
+
+  <ApolloProvider client={client}>
     <App />
-  </Provider>
+  </ApolloProvider>
     
 
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
